@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/navigation/nav_graph.xml — VERSIÓN CORREGIDA -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <!-- PANTALLA INICIAL con los dos botones -->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.arquitecturamvvmhiltfirebase_albertogv.fragments.MainFragment"
+        android:label="Inicio">
+
+        <action
+            android:id="@+id/action_main_to_listado"
+            app:destination="@id/listadoIncidenciasFragment" />
+
+        <action
+            android:id="@+id/action_main_to_registro"
+            app:destination="@id/registroIncidenciaFragment" />
+    </fragment>
+
+    <!-- LISTADO DE INCIDENCIAS -->
+    <fragment
+        android:id="@+id/listadoIncidenciasFragment"
+        android:name="com.example.arquitecturamvvmhiltfirebase_albertogv.fragments.ListadoIncidenciasFragment"
+        android:label="Listado de Incidencias">
+
+        <action
+            android:id="@+id/actionListadoToRegistro"
+            app:destination="@id/registroIncidenciaFragment" />
+    </fragment>
+
+    <!-- REGISTRO / EDICIÓN DE INCIDENCIA -->
+    <fragment
+        android:id="@+id/registroIncidenciaFragment"
+        android:name="com.example.arquitecturamvvmhiltfirebase_albertogv.fragments.RegistroIncidenciaFragment"
+        android:label="Registro de Incidencia">
+
+        <argument
+            android:name="incidenciaId"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+
+</navigation>

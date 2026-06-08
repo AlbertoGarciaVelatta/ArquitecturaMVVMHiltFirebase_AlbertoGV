@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/fragment_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Incidencias"
+        android:textAppearance="?attr/textAppearanceHeadlineMedium"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnVerListado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Listado de Incidencias"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnNuevaIncidencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:text="Registrar Nueva Incidencia"/>
+
+</LinearLayout>
